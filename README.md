@@ -7,7 +7,18 @@ Na API você pode listar todas as ferramentas, filtrar as ferramentas que possue
 
 ## Desenvolvimento
 A API foi desenvolvida com o NodeJS e MongoDB como banco de dados.
-As dependências foram apenas o Express, o mongoose como ORM, facilitando a comunicação com banco de dados, e cors para permitir comunicação com outros domínios. Foi utilizado também em modo de devDependencies o nodemon, agilizando a atualização da API durante o desenvolvimento, e o eslint para verificação do padrão do código.
+###Dependências
+As dependências, gerenciadas com yarn, foram:
+O express como framework para facilitar a criação do servidor http. 
+O express load para carregar os módulos de models e controllers da api
+Lodash para facilitar trabalho com objetos e arrays
+####MiddleWares:
+O cors para permitir comunicação com outros domínios. 
+O body-parser para facilitar a leitura da requisição em formto json
+O mongoose como ORM, facilitando a comunicação com banco de dados
+###devDependencies
+O nodemon, agilizando a atualização da API durante o desenvolvimento.
+Eslint com style guide do AirBnb para padronização do código
 
 ## Testando a API
 Para facilitar o teste do uso da API ela foi colocada online e se encontra em Heroku
