@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 var mongoose = require('mongoose');
 
 module.exports = function (url) {
@@ -10,6 +10,6 @@ module.exports = function (url) {
       mongoose.connection.close(() => {
           console.log('Mongoose was closed');
           process.exit(0);
-      })
-  })
-}
+      });
+  });
+};

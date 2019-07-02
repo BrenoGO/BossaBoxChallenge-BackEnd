@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 const _ = require('lodash');
 
 module.exports = function (app) {
@@ -38,6 +38,6 @@ module.exports = function (app) {
       await Tools.findOneAndRemove({id: req.params.id});
       controller.index(req, res);
     }
-  }
+  };
   return controller;
-}
+};

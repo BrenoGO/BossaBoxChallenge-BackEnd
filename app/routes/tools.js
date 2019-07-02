@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 module.exports = function (app) {
   const toolsController = app.controllers.tools;
 
@@ -6,4 +6,4 @@ module.exports = function (app) {
   app.get('/tools/:id', toolsController.showById);
   app.post('/tools', toolsController.newTool);
   app.delete('/tools/:id', toolsController.remove);
-}
+};

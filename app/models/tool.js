@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 var mongoose = require('mongoose');
 
 module.exports = function(){
@@ -23,6 +23,5 @@ module.exports = function(){
         type: Array
       }
     });
-
     return mongoose.model('Tool', schema);
-}
+};

@@ -9,16 +9,16 @@ Na API você pode listar todas as ferramentas, filtrar as ferramentas que possue
 A API foi desenvolvida com o NodeJS e MongoDB como banco de dados.
 ###Dependências
 + As dependências, gerenciadas com yarn, foram:
-  + O express como framework para facilitar a criação do servidor http. 
-  + O express load para carregar os módulos de models e controllers da api
-Lodash para facilitar trabalho com objetos e arrays
+  + Express como framework para facilitar a criação do servidor http. 
+  + Express-load para carregar os módulos de models e controllers da api
+  + Lodash para facilitar trabalho com objetos e arrays
 + MiddleWares:
-++ O cors para permitir comunicação com outros domínios. 
-O body-parser para facilitar a leitura da requisição em formto json
-O mongoose como ORM, facilitando a comunicação com banco de dados
+  + Cors para permitir comunicação com outros domínios. 
+  + Body-parser para facilitar a leitura da requisição em formto json
+  + Mongoose como ORM, facilitando a comunicação com banco de dados
 + devDependencies:
-O nodemon, agilizando a atualização da API durante o desenvolvimento.
-Eslint com style guide do AirBnb para padronização do código
+  + Nodemon, agilizando a atualização da API durante o desenvolvimento.
+  + Jshint para padronização do código
 
 ## Testando a API
-Para facilitar o teste do uso da API ela foi colocada online e se encontra em Heroku
+Para facilitar o teste do uso da API ela foi disponibilizada online e se encontra em https://heroku.com/BrenoGO.... Pode ser testado com APPs como Insomnia ou Postman

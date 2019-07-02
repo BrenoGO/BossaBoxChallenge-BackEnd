@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 const express = require('express');
 const load = require('express-load');
 const bodyParser = require('body-parser');
@@ -7,7 +7,7 @@ const cors = require('cors');
 module.exports = function () {
   const app = express();
   
-  app.set('port', 3000);
+  app.set('port', process.env.PORT);
   app.use(cors());
   app.use(bodyParser.json());
   
@@ -17,4 +17,4 @@ module.exports = function () {
     .into(app);
   
   return app;
-}
+};
