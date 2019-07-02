@@ -12,11 +12,11 @@ As dependências, gerenciadas com yarn, foram:
 O express como framework para facilitar a criação do servidor http. 
 O express load para carregar os módulos de models e controllers da api
 Lodash para facilitar trabalho com objetos e arrays
-####MiddleWares:
++ MiddleWares:
 O cors para permitir comunicação com outros domínios. 
 O body-parser para facilitar a leitura da requisição em formto json
 O mongoose como ORM, facilitando a comunicação com banco de dados
-###devDependencies
++ devDependencies:
 O nodemon, agilizando a atualização da API durante o desenvolvimento.
 Eslint com style guide do AirBnb para padronização do código
 
