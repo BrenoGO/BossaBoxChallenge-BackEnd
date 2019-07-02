@@ -21,4 +21,4 @@ A API foi desenvolvida com o NodeJS e MongoDB como banco de dados.
   + Jshint para padronização do código
 
 ## Testando a API
-Para facilitar o teste do uso da API ela foi disponibilizada online e se encontra em https://heroku.com/BrenoGO.... Pode ser testado com APPs como Insomnia ou Postman
+Para facilitar o teste do uso da API ela foi disponibilizada online e se encontra em https://bossabox-challenge-backend.herokuapp.com/ Pode ser testado com aplicativos como Insomnia ou Postman
