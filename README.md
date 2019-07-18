@@ -7,7 +7,7 @@ Na API você pode listar todas as ferramentas, filtrar as ferramentas que possue
 
 ## Desenvolvimento
 A API foi desenvolvida com o NodeJS e MongoDB como banco de dados.
-###Dependências
+
 + As dependências, gerenciadas com yarn, foram:
   + Express como framework para facilitar a criação do servidor http. 
   + Express-load para carregar os módulos de models e controllers da api
