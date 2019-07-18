@@ -14,7 +14,7 @@ A API foi desenvolvida com o NodeJS e MongoDB como banco de dados.
   + Lodash para facilitar trabalho com objetos e arrays
 + MiddleWares:
   + Cors para permitir comunicação com outros domínios. 
-  + Body-parser para facilitar a leitura da requisição em formto json
+  + Body-parser para facilitar a leitura da requisição em formato json
   + Mongoose como ORM, facilitando a comunicação com banco de dados
 + devDependencies:
   + Nodemon, agilizando a atualização da API durante o desenvolvimento.

@@ -20,7 +20,7 @@ module.exports = function(){
         required: true
       },
       tags: {
-        type: Array
+        type: [String]
       }
     });
     return mongoose.model('Tool', schema);
