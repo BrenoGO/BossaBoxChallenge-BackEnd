@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 
 module.exports = function (url) {
-  mongoose.connect(url, { useNewUrlParser: true, useFindAndModify: false });
+  mongoose.connect(url, { useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true });
   mongoose.connection.on('connected', () => {console.log('Mongoose connected');});
   mongoose.connection.on('disconnected', () => {console.log('Mongoose dropped connection');});
   mongoose.connection.on('error   ', err => {console.log('Mongoose error:'+err);});

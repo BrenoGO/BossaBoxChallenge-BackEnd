@@ -10,8 +10,9 @@ A API foi desenvolvida com o NodeJS e MongoDB como banco de dados.
 
 + As dependências, gerenciadas com yarn, foram:
   + Express como framework para facilitar a criação do servidor http. 
-  + Express-load para carregar os módulos de models e controllers da api
+  + Consign para carregar automaticamente os módulos de models, controllers e routes da api
   + Lodash para facilitar trabalho com objetos e arrays
+  + Passport, passport-jwt e jsonwebtoken para realizar autenticação de usuario
 + MiddleWares:
   + Cors para permitir comunicação com outros domínios. 
   + Body-parser para facilitar a leitura da requisição em formato json
@@ -21,4 +22,5 @@ A API foi desenvolvida com o NodeJS e MongoDB como banco de dados.
   + Jshint para padronização do código
 
 ## Testando a API
-Para facilitar o teste do uso da API ela foi disponibilizada online e se encontra em https://bossabox-challenge-backend.herokuapp.com/ Pode ser testado com aplicativos como Insomnia ou Postman
+Para facilitar o teste do uso da API ela foi disponibilizada online e se encontra em https://bossabox-challenge-backend.herokuapp.com/ Pode ser testado com aplicativos como Insomnia ou Postman. 
+Temos autenticação para inserir ou remover ferramentas, portanto é necessário realizar uma requição POST para '/login' com os dados {"name": "Teste", "password": "teste123"} e extrair o token retornado. As requisições para adicionar ou remover ferramentas deverá ter no Header o campo Authorization e valor `JWT ${Token}`.
