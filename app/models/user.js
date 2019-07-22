@@ -1,7 +1,8 @@
+"use strict";
 var mongoose = require('mongoose');
 
 module.exports = function(){
-  var schema = mongoose.Schema({
+  const schema = mongoose.Schema({
     name: {
       type: String,
       required: true,
@@ -14,5 +15,5 @@ module.exports = function(){
       required: true
     }
   });
-  return mongoose.model('User', schema)
-}
+  return mongoose.model('User', schema);
+};

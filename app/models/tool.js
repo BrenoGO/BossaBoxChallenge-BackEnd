@@ -1,8 +1,8 @@
 "use strict";
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 module.exports = function(){
-    var schema = mongoose.Schema({
+    const schema = mongoose.Schema({
       id: {
         type: Number,
         required: true,
