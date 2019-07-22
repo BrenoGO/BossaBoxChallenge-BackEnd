@@ -8,6 +8,25 @@ VUTTR é um simples repositório para gerenciar ferramentas com seus respectivos
 
 Grupo de todas as ferramentas
 
+## Autenticação [/login]
+
+### Realizar o login na aplicação [POST]
+Para criar ou excluir ferramentas na aplicação será necessário ter realizado login inicialmente
++ name - Nome do usuário
++ password - senha do usuário
++ Request (application/json)
+          {
+            "name": "Teste",
+            "password": "teste123"
+          }
++ Response 200 (application/json)
+        {
+          "message": "ok",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDMxZDU3M2U3MTc5YTI2YTk3MjljZTMiLCJpYXQiOjE1NjM1NjgxMDh9.-zH9eDqn_CCerLRaA0uKSJOMWN01gF0eBKnHPl2lM_Q"
+        }
+
+Este token deve ser guardado para ser inserido no header, em Authorization.
+
 ## Ferramentas [/tools]
 
 ### Listar ferramentas [GET]
@@ -59,12 +78,15 @@ Lista todas as ferramentas
           }
         ]
 
-### Criar ferramenta [POST]
+### Criar ferramenta [POST] - Protegido por autenticação
 Criar uma nova ferramenta
 + title(string) - O título, ou nome, da ferramenta
 + link(string) - O link para o site oficial da ferramenta
 + description(string) - A descrição da ferramenta
 + tags(array[string]) - tags para realizar buscas de ferramentas
++ Header
+  + Content-Type: application/json
+  + Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDMxZDU3M2U3MTc5YTI2YTk3MjljZTMiLCJpYXQiOjE1NjM1NjgxMDh9.-zH9eDqn_CCerLRaA0uKSJOMWN01gF0eBKnHPl2lM_Q
 + Request (application/json)
 	
         {
@@ -77,7 +99,7 @@ Criar uma nova ferramenta
           ]
         }
 
-+ Response 200 (application/json)
++ Response 201 Created (application/json)
 	
         {
           "id": "4"
@@ -112,7 +134,10 @@ Especificar a ferramenta de acordo com seu id
             "id": 3,
 	        }
  
-### Remover ferramenta [DELETE]
+### Remover ferramenta [DELETE] - Protegido por autenticação
++ Header
+  + Content-Type: application/json
+  + Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDMxZDU3M2U3MTc5YTI2YTk3MjljZTMiLCJpYXQiOjE1NjM1NjgxMDh9.-zH9eDqn_CCerLRaA0uKSJOMWN01gF0eBKnHPl2lM_Q
 + Response 200
 	{}
 

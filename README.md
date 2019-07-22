@@ -21,6 +21,7 @@ A API foi desenvolvida com o NodeJS e MongoDB como banco de dados.
   + Nodemon, agilizando a atualização da API durante o desenvolvimento.
   + Jshint para padronização do código
 
-## Testando a API
-Para facilitar o teste do uso da API ela foi disponibilizada online e se encontra em https://bossabox-challenge-backend.herokuapp.com/ Pode ser testado com aplicativos como Insomnia ou Postman. 
+## API online
+A API foi disponibilizada online e se encontra em https://bossabox-challenge-backend.herokuapp.com/ 
+Pode ser testada com aplicativos como Insomnia ou Postman. 
 Temos autenticação para inserir ou remover ferramentas, portanto é necessário realizar uma requição POST para '/login' com os dados {"name": "Teste", "password": "teste123"} e extrair o token retornado. As requisições para adicionar ou remover ferramentas deverá ter no Header o campo Authorization e valor `JWT ${Token}`.

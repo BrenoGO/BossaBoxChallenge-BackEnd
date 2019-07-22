@@ -9,8 +9,12 @@ var auth = require('./auth').auth;
 module.exports = function () {
   const app = express();
   
-  //app.set('port', process.env.PORT);
-  app.set('port', 3001);
+  if(process.env.PORT){
+    app.set('port', process.env.PORT);
+  }else{
+    app.set('port', 3000);
+  }
+  
   app.use(auth.initialize());
   app.use(cors());
   app.use(bodyParser.json());
