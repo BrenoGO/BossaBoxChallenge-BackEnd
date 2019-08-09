@@ -4,8 +4,7 @@ const jwt = require('jsonwebtoken');
 const passportJWT = require('passport-jwt');
 const mongoose = require('mongoose');
 
-const { JwtSecretOrKey: secretOrKey  } = require('./private');
-
+const secretOrKey = process.env.JWT_SECRET_OR_KEY;
 const ExtractJWT = passportJWT.ExtractJwt;
 const JwtStrategy = passportJWT.Strategy;
 

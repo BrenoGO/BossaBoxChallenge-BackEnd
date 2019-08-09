@@ -25,9 +25,8 @@ module.exports = function (app) {
     },
 
     newTool: async (req, res) => {
-      const tools = await Tool.find();
-      const maxToolId = _.maxBy(tools, 'id');
-      const id = maxToolId.id + 1;
+      const maxTool = await Tool.findOne().sort('-id');
+      const id = maxTool.id + 1;
       const data = {...req.body, id};
       const tool = await Tool.create(data);
       return res.status(201).json(tool);

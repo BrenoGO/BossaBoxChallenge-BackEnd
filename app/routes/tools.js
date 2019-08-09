@@ -8,7 +8,6 @@ module.exports = function (app) {
   const authController = app.controllers.authController;
 
   app.post('/login', authController.login);
-  
   app.get('/tools', toolsController.index);
   app.get('/tools/:id', toolsController.showById);
   app.post('/tools', auth.authenticate, toolsController.newTool);
